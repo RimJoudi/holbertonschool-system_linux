@@ -11,42 +11,32 @@
 
 void hls(const char *dir, int op_a, int op_l, int op_1)
 {
-    struct dirent *read;
-    DIR *dh = opendir(dir);
-    
-    if(!dh)
-    {
-        if(errno == ENOENT)
-            perror("directory doesn't exist");
-        else
-        {
-            perror("enable to read directory");
-        }
+	struct dirent *read;
+	DIR *dh = opendir(dir);
 
-        exit(EXIT_FAILURE);
-    }
-
-    while ((read = readdir(dh)) != NULL)
-    {   
-        
-       
-        if (!op_a && read->d_name[0] == '.')
-            continue;
-        if(!op_l)
-            printf("%s ",read->d_name);
-            
-        
-       if(op_1)
-             printf("\n");
-
-        if(op_l)
-        {
-            op_longformat(read);
-        }
-
-        
-    }
-
-   if(!op_1 && !op_l) printf("\n");
-    
+	if (!dh)
+	{
+		if (errno == ENOENT)
+			perror("directory doesn't exist");
+		else
+		{
+			perror("enable to read directory");
+		}
+		exit(EXIT_FAILURE);
+	}
+	while ((read = readdir(dh)) != NULL)
+	{
+		if (!op_a && read->d_name[0] == '.')
+			continue;
+		if (!op_l)
+			printf("%s ", read->d_name);
+		if (op_1)
+			printf("\n");
+		if (op_l)
+		{
+			op_longformat(read);
+		}
+	}
+	if (!op_1 && !op_l)
+		printf("\n");
 }
