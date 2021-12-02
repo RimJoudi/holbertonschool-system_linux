@@ -32,7 +32,7 @@ void op_longformat(struct dirent *read)
     //while ((read = readdir(dh)) != NULL)
    // {
        // printf ("%s ", read->d_name);
-        strncpy(time, ctime(&fileStat.st_mtime), 24);
+        _strncpy(time, ctime(&fileStat.st_mtime), 24);
        // strcpy (fullpath, argv[1]);
         //strcat (fullpath, "/");
        // strcat (fullpath, read->d_name);
