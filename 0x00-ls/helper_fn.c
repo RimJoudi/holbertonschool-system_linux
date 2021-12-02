@@ -15,8 +15,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (i < n && src[i] != '\0')
 	{
-	dest[i] = src[i];
-	i++;
+		dest[i] = src[i];
+		i++;
 	}
 	i = i;
 	while (i < n)
@@ -26,7 +26,6 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	return (dest);
 }
-
 
 /**
  * _strcmp - Compares two strings.
@@ -47,4 +46,3 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (j);
 }
-
