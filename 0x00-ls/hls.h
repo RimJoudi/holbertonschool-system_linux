@@ -28,6 +28,8 @@ int main(int argc, const char *argv[]);
 void op_longformat(struct dirent *read);
 
 
+char *_strncpy(char *dest, char *src, int n);
+int _strcmp(char *s1, char *s2);
 
 
 

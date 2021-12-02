@@ -27,13 +27,13 @@ int main(int argc, const char *argv[])
             char *p = (char *)(argv[1] + 1);
             while (*p)
             {
-               if (strcmp(p, "a") == 0)
+               if (_strcmp(p, "a") == 0)
                      op_a = 1;
                     
-                else if (strcmp(p, "l") == 0)
+                else if (_strcmp(p, "l") == 0)
                     op_l = 1;
                     
-                else if (strcmp(p, "1") == 0)
+                else if (_strcmp(p, "1") == 0)
                     op_1 = 1;
                 
                 else
@@ -66,13 +66,13 @@ int main(int argc, const char *argv[])
                 char *p = (char *) (argv[1] + 1);
                 while (*p)
                 {
-                    if (strcmp(p, "a") == 0)
+                    if (_strcmp(p, "a") == 0)
                         op_a = 1;
                     
-                    else if (strcmp(p, "l") == 0)
+                    else if (_strcmp(p, "l") == 0)
                         op_l = 1;
                     
-                    else if (strcmp(p, "1") == 0)
+                    else if (_strcmp(p, "1") == 0)
                         op_1 = 1;
                 
                     else
