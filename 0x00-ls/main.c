@@ -7,7 +7,6 @@
  */
 int main(int argc, const char *argv[])
 {
-	int op_a = 0, op_l = 0, op_1 = 0;
 	
 	if (argc == 1)
 		hls(".", 0, 0, 0);
@@ -15,6 +14,7 @@ int main(int argc, const char *argv[])
 	{
 		if (argv[1][0] == '-') /*checking if option is passed*/
 		{
+			int op_a = 0, op_l = 0, op_1 = 0;
 			char *p = (char *)(argv[1] + 1);
 
 			while (*p)
@@ -46,7 +46,8 @@ int main(int argc, const char *argv[])
 					perror("Incorrect usage");
 					exit(EXIT_FAILURE);
 				}
-
+				
+				int op_a = 0, op_l = 0, op_1 = 0;
 				char *p = (char *) (argv[1] + 1);
 
 				while (*p)
