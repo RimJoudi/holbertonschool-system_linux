@@ -16,13 +16,7 @@ void hls(const char *dir, int op_a, int op_l, int op_1)
 
 	if (!dh)
 	{
-		if (errno == ENOENT)
-			perror("directory doesn't exist");
-		else
-		{
-			perror("enable to read directory");
-		}
-		exit(EXIT_FAILURE);
+		handle_error(dir);
 	}
 	while ((read = readdir(dh)) != NULL)
 	{

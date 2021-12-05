@@ -26,7 +26,9 @@
 void hls(const char *dir, int op_a, int op_l, int op_1);
 int main(int argc, const char *argv[]);
 void op_longformat(struct dirent *read);
+void check_op(int op_a, int op_1, int op_l);
 
+void handle_error(const char *filename);
 
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);

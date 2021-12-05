@@ -4,8 +4,6 @@
  * @read: struct dirent
  * return: void
  */
-
-
 void op_longformat(struct dirent *read)
 {
 	struct stat fileStat;
