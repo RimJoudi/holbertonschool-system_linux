@@ -16,7 +16,11 @@ void hls(const char *dir, int op_a, int op_l, int op_1)
 
 	if (!dh)
 	{
-		handle_error(dir);
+		if (errno == ENOENT)
+			fprintf(stderr, "hls: cannot access '%s': No such file or directory\n", dir);
+		else if (errno == EACCES)
+			fprintf(stderr, "hls: cannot open directory '%s'\n", dir);
+		exit(EXIT_FAILURE);
 	}
 	while ((read = readdir(dh)) != NULL)
 	{
