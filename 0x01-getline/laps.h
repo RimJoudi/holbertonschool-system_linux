@@ -9,4 +9,4 @@ void race_state(int *id, size_t size);
 void sort_car(int *cars, int *laps, int count);
 void swap(int a, int b);
 
-#endif
+#endif /* HEADER_H */

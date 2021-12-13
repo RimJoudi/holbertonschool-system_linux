@@ -1,7 +1,8 @@
 #include "laps.h"
 
 /**
- * race_state - keeps track of the number of laps made by several cars in a race.
+ * race_state - keeps track of the number of
+ *    laps made by several cars in a race.
  * @id: id of each car which is an arr of int
  * @size: size of this array
  * return: the race state
@@ -50,7 +51,9 @@ void race_state(int *id, size_t size)
  */
 void swap(int a, int b)
 {
-	int tmp = a;
+	int tmp = 0;
+
+	tmp = a;
 	a = b;
 	b = tmp;
 }
@@ -70,7 +73,7 @@ void sort_car(int *cars, int *laps, int count)
 	{
 		if (cars[x] < cars[x - 1])
 		{
-			swap(x-1, x);
+			swap(x - 1, x);
 			swap(laps[x - 1], laps[x]);
 		}
 	}
