@@ -43,20 +43,7 @@ void race_state(int *id, size_t size)
 		printf("Car %d [%d laps]\n", cars[j], laps[j]);
 	}
 }
-/**
- * swap - fn to swap
- * @a: param 1 to be swaped
- * @b: param 2 to be swaped
- * return: void
- */
-void swap(int a, int b)
-{
-	int tmp = 0;
 
-	tmp = a;
-	a = b;
-	b = tmp;
-}
 
 /**
  * sort_car - fn to sort cars.
@@ -67,14 +54,18 @@ void swap(int a, int b)
  */
 void sort_car(int *cars, int *laps, int count)
 {
-	int x;
+	int x, tmp = 0;
 
 	for (x = count; x > 0; x--)
 	{
 		if (cars[x] < cars[x - 1])
 		{
-			swap(x - 1, x);
-			swap(laps[x - 1], laps[x]);
+			tmp = cars[x - 1];
+			cars[x - 1] = cars[x];
+			cars[x] = tmp;
+			tmp = laps[x - 1];
+			laps[x - 1] = laps[x];
+			laps[x] = tmp;
 		}
 	}
 }
